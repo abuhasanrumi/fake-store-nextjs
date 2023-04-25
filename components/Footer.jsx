@@ -9,7 +9,7 @@ const Footer = () => {
         {/* LEFT START */}
         <div className="flex gap-[50px] md:gap-[75px] lg:gap-[100px] flex-col md:flex-row">
           {/* MENU START */}
-          <div className="flex flex-col gap-3 shrink-0">
+          <div className="flex flex-col text-center md:text-left gap-3 shrink-0">
             <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
               Find a store
             </div>
@@ -29,7 +29,7 @@ const Footer = () => {
           {/* MENU END */}
 
           {/* NORMAL MENU START */}
-          <div className="flex gap-[50px] md:gap-[75px] lg:gap-[100px] shrink-0">
+          <div className="flex justify-center gap-[50px] md:gap-[75px] lg:gap-[100px] shrink-0">
             {/* MENU START */}
             <div className="flex flex-col gap-3">
               <div className="font-oswald font-medium uppercase text-sm">
@@ -43,9 +43,6 @@ const Footer = () => {
               </div>
               <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
                 Returns
-              </div>
-              <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
-                Payment Options
               </div>
               <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
                 Contact Us
