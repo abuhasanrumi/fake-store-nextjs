@@ -15,9 +15,9 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const handleNavScroll = () => {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 100) {
       if (window.scrollY > lastScrollY && !mobileMenu) {
-        setShow("-translate-y-[-80px]");
+        setShow("-translate-y-[80px]");
       } else {
         setShow("shadow-sm");
       }
@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <header
-      className={`w-full h-[50px] md:h-[80px] bg-white flex justify-between items-center z-10 sticky top-0 transition-transform duration-300 ${show}`}
+      className={`w-full h-[50px] md:h-[80px] bg-white flex justify-between items-center z-10 sticky top-0 transition-transform duration-600 ${show}`}
     >
       <Wrapper className="h-[60px] flex items-center justify-between">
         <div className="logo w-[40px] md:w-[60px]">
