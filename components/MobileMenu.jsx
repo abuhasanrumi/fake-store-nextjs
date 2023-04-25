@@ -16,31 +16,39 @@ const subMenuData = [
   { id: 4, name: "Fashion", doc_count: 107 },
 ];
 
-const Menu = ({ showCategoryMenu, setShowCategoryMenu }) => {
+const MobileMenu = ({
+  showCategoryMenu,
+  setShowCategoryMenu,
+  setMobileMenu,
+}) => {
   return (
-    <ul className="hidden md:flex items-center gap-8 font-medium">
+    <ul className="flex flex-col md:hidden font-bold absolute top-[50px] left-0 w-full h-[calc(100vh-50px)] bg-white border-t text-black">
       {data.map((item) => {
         return (
           <span key={item.id}>
             {!!item?.subMenu ? (
               <li
-                className="cursor-pointer flex items-center gap-2 relative"
-                onMouseEnter={() => setShowCategoryMenu(true)}
-                onMouseLeave={() => setShowCategoryMenu(false)}
+                className="cursor-pointer py-4 px-5 border-b flex flex-col relative"
+                onClick={() => setShowCategoryMenu(!showCategoryMenu)}
               >
-                {item.name}
-                <BsChevronDown size={14} />
+                <div className="flex justify-between items-center">
+                  {item.name}
+                  <BsChevronDown size={14} />
+                </div>
 
                 {showCategoryMenu && (
-                  <ul className="bg-white text-black absolute top-6 left-0 min-w-[250px] p-2 shadow-lg rounded-[2px]">
+                  <ul className="bg-black/[0.05] -mx-5 mt-4 -mb-4">
                     {subMenuData.map((subItem) => {
                       return (
                         <Link
                           key={subItem.id}
                           href="/"
-                          onClick={() => setShowCategoryMenu(false)}
+                          onClick={() => {
+                            setShowCategoryMenu(false);
+                            setMobileMenu(false);
+                          }}
                         >
-                          <li className="cursor-pointer h-12 flex justify-between items-center px-3 hover:bg-black/[0.03] rounded-md">
+                          <li className="py-4 px-8 border-t flex justify-between">
                             {subItem.name}
                             <span className="opacity-50 text-sm">78</span>
                           </li>
@@ -51,8 +59,10 @@ const Menu = ({ showCategoryMenu, setShowCategoryMenu }) => {
                 )}
               </li>
             ) : (
-              <li className="cursor-pointer">
-                <Link href={item?.url}>{item.name}</Link>
+              <li className="py-4 px-5 border-b">
+                <Link href={item?.url} onClick={() => setMobileMenu(false)}>
+                  {item.name}
+                </Link>
               </li>
             )}
           </span>
@@ -62,4 +72,4 @@ const Menu = ({ showCategoryMenu, setShowCategoryMenu }) => {
   );
 };
 
-export default Menu;
+export default MobileMenu;
