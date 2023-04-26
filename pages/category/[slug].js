@@ -6,9 +6,10 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 
 const Category = () => {
-    const [catData, setCatData] = useState([]);
     const router = useRouter();
     const { slug } = router.query;
+
+    const [catData, setCatData] = useState([]);
     useEffect(() => {
         axios
             .get(`https://fakestoreapi.com/products/category/${slug}`)
