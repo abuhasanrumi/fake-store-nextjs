@@ -4,7 +4,7 @@ import Link from "next/link";
 import Menu from "./Menu";
 import { IoMdHeartEmpty } from "react-icons/Io";
 import { BsCart } from "react-icons/bs";
-import { BiMenuAltRight } from "react-icons/bi";
+import { BiMenuAltRight, BiUserCircle } from "react-icons/bi";
 import { VscChromeClose } from "react-icons/vsc";
 import MobileMenu from "./MobileMenu";
 
@@ -58,14 +58,16 @@ const Header = () => {
             />
           )}
         </div>
-        <div className="flex items-center gap-2 text-black">
+        <div className="flex items-center gap-3 text-black">
           {/* heart Icon starts here  */}
-          <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex items-center justify-center hover:bg-black/[0.05] cursor-pointer relative">
-            <IoMdHeartEmpty className="text-[19px] md:text-[24px]" />
-            <div className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-red-600 absolute top-1 left-5 md:left-7 text-white text-[10px] md:text-[12px] flex items-center justify-center px-[2px] md:px-[5px]">
-              5
+          <Link href="/wishlist">
+            <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex items-center justify-center hover:bg-black/[0.05] cursor-pointer relative">
+              <IoMdHeartEmpty className="text-[19px] md:text-[24px]" />
+              <div className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-red-600 absolute top-1 left-5 md:left-7 text-white text-[10px] md:text-[12px] flex items-center justify-center px-[2px] md:px-[5px]">
+                5
+              </div>
             </div>
-          </div>
+          </Link>
           {/* heart icon ends here  */}
 
           {/* cart Icon starts here  */}
@@ -78,6 +80,14 @@ const Header = () => {
             </div>
           </Link>
           {/* cart icon ends here  */}
+
+          {/* user Icon starts here  */}
+          <Link href="/login">
+            <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex items-center justify-center hover:bg-black/[0.05] cursor-pointer relative">
+              <BiUserCircle className="text-[18px] md:text-[24px]" />
+            </div>
+          </Link>
+          {/* user icon ends here  */}
 
           {/* mobile menu Icon starts here  */}
           <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex md:hidden items-center justify-center hover:bg-black/[0.05] cursor-pointer relative -mr-2">

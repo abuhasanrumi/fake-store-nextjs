@@ -1,4 +1,4 @@
-import stringToSlug from "@/Utils/slugify";
+import { stringToSlug } from "@/Utils/slugify";
 import Link from "next/link";
 import React from "react";
 import { BsChevronDown } from "react-icons/bs";
