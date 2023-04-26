@@ -69,16 +69,18 @@ const Header = () => {
           {/* heart icon ends here  */}
 
           {/* cart Icon starts here  */}
-          <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex items-center justify-center hover:bg-black/[0.05] cursor-pointer relative">
-            <BsCart className="text-[15px] md:text-[20px]" />
-            <div className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-red-600 absolute top-1 left-5 md:left-7 text-white text-[10px] md:text-[12px] flex items-center justify-center px-[2px] md:px-[5px]">
-              5
+          <Link href="/cart">
+            <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex items-center justify-center hover:bg-black/[0.05] cursor-pointer relative">
+              <BsCart className="text-[15px] md:text-[20px]" />
+              <div className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-red-600 absolute top-1 left-5 md:left-7 text-white text-[10px] md:text-[12px] flex items-center justify-center px-[2px] md:px-[5px]">
+                5
+              </div>
             </div>
-          </div>
+          </Link>
           {/* cart icon ends here  */}
 
           {/* mobile menu Icon starts here  */}
-          <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex items-center justify-center hover:bg-black/[0.05] cursor-pointer relative -mr-2">
+          <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex md:hidden items-center justify-center hover:bg-black/[0.05] cursor-pointer relative -mr-2">
             {mobileMenu ? (
               <VscChromeClose
                 className="text-[16px]"
