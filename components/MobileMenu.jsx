@@ -1,3 +1,4 @@
+import stringToSlug from "@/Utils/slugify";
 import Link from "next/link";
 import React from "react";
 import { BsChevronDown } from "react-icons/bs";
@@ -10,10 +11,10 @@ const data = [
 ];
 
 const subMenuData = [
-  { id: 1, name: "Smartwatch", doc_count: 11 },
-  { id: 2, name: "Laptop", doc_count: 8 },
-  { id: 3, name: "Television", doc_count: 64 },
-  { id: 4, name: "Fashion", doc_count: 107 },
+  { id: 1, name: "Electronics", doc_count: 11 },
+  { id: 2, name: "Jewelery", doc_count: 8 },
+  { id: 3, name: "Men's Clothing", doc_count: 64 },
+  { id: 4, name: "Women's Clothing", doc_count: 107 },
 ];
 
 const MobileMenu = ({
@@ -42,7 +43,7 @@ const MobileMenu = ({
                       return (
                         <Link
                           key={subItem.id}
-                          href="/"
+                          href={`/category/${stringToSlug(subItem.name)}`}
                           onClick={() => {
                             setShowCategoryMenu(false);
                             setMobileMenu(false);
