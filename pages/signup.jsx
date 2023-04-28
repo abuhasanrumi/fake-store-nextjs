@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Signup = () => {
   return (
-    <div className="min-h-[650px] flex items-center">
+    <div className="min-h-[750px] flex items-center">
       <Wrapper>
         <div className="max-w-[600px] rounded-lg p-5 border border-black mx-auto flex flex-col ">
           <div className="text-2xl font-bold mb-[50px] text-center">
@@ -14,7 +14,7 @@ const Signup = () => {
           <div class="mb-6">
             <label
               for="default-input"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              class="block mb-2 text-sm font-medium text-gray-900"
             >
               Name
             </label>
@@ -28,7 +28,7 @@ const Signup = () => {
           <div class="mb-6">
             <label
               for="default-input"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              class="block mb-2 text-sm font-medium text-gray-900"
             >
               Phone Number
             </label>
@@ -42,7 +42,7 @@ const Signup = () => {
           <div class="mb-6">
             <label
               for="default-input"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              class="block mb-2 text-sm font-medium text-gray-900"
             >
               Password
             </label>
@@ -54,8 +54,7 @@ const Signup = () => {
           </div>
 
           <div className="w-full flex justify-between mb-6">
-            <Link href="admin-login">Are you an admin?</Link>
-            <Link href="admin-login">Don't have an account?</Link>
+            <Link href="/login">Already have an account?</Link>
           </div>
 
           <Link

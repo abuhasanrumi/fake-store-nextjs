@@ -9,15 +9,17 @@ const UserDashboard = () => {
         This page is under constructon
       </div>
       <div className="text-md md:text-xl">
-        Please login as an admin to see admin dashboard.
+        Please move to the admin dashboard to see my further work.
       </div>
 
-      <Link
-        href="/admin-login"
+      <a
+        target="_blank"
+        href="https://fake-store-admin-git-main-abuhasanrumi.vercel.app/"
         className="w-full md:w-[300px] py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75 flex items-center gap-2 justify-center mx-auto mt-[25px]"
+        rel="noreferrer"
       >
-        Login as Admin
-      </Link>
+        Admin Live Link
+      </a>
     </div>
   );
 };

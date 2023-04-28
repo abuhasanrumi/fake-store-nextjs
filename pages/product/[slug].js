@@ -6,6 +6,8 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 import { IoMdHeartEmpty } from 'react-icons/io'
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
+import InnerImageZoom from 'react-inner-image-zoom';
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.min.css';
 
 const ProductDetails = () => {
     const router = useRouter();
@@ -39,7 +41,15 @@ const ProductDetails = () => {
                         {/* left column start */}
                         <div className="w-full md:w-auto flex-[1.5] max-w-[500px] lg:max-w-full mx-auto lg:mx-0 p-6 bg-gray-100">
                             <div className='text-white text-[20px] w-full max-w-[1360px] mx-auto sticky top-[50px] p-6'>
-                                <Image className='mx-auto' priority={true} src={product.image} height={100} width={500} alt={product.title} />
+                                <InnerImageZoom
+                                    className='mx-auto'
+                                    src={product.image}
+                                    zoomScale={1.5}
+                                    zoomType='hover'
+                                    alt={product.title}
+                                    height={100}
+                                    width={500}
+                                />
                             </div>
                         </div>
                         {/* left column end */}
@@ -55,7 +65,7 @@ const ProductDetails = () => {
                                 {/* PRODUCT PRICE */}
                                 <div className="flex items-center ">
                                     <p className="mr-2 text-lg font-semibold text-red-600">
-                                        MRP : &#8377;{product.price}
+                                        MRP : ${product.price}
                                     </p>
                                 </div>
 
