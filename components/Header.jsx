@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Wrapper from "./Wrapper";
 import Link from "next/link";
 import Menu from "./Menu";
-import { IoMdHeartEmpty } from "react-icons/Io";
+import { IoMdHeartEmpty } from "react-icons/io";
 import { BsCart } from "react-icons/bs";
 import { BiMenuAltRight, BiUserCircle } from "react-icons/bi";
 import { VscChromeClose } from "react-icons/vsc";
