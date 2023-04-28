@@ -4,7 +4,7 @@ import axios from 'axios';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
-import { IoMdHeartEmpty } from 'react-icons/Io'
+import { IoMdHeartEmpty } from 'react-icons/io'
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 
 const ProductDetails = () => {
